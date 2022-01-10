@@ -1,16 +1,17 @@
 <template>
   <v-app class="white">
-    <v-toolbar dense>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+<!--    <v-toolbar dense>-->
+<!--      <v-app-bar-nav-icon></v-app-bar-nav-icon>-->
 
-      <v-toolbar-title>Covid-19</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-    </v-toolbar>
+<!--      <v-toolbar-title>-->
+<!--      </v-toolbar-title>-->
+<!--      <v-spacer></v-spacer>-->
+<!--      <v-text-field label="Search" class="mt-7" dense single-line outlined-->
+<!--                    v-model="search" @input="$store.dispatch('setValSearch', search)"></v-text-field>-->
+<!--      <v-btn icon>-->
+<!--        <v-icon>mdi-magnify</v-icon>-->
+<!--      </v-btn>-->
+<!--    </v-toolbar>-->
     <v-main>
       <v-container>
         <Nuxt />
@@ -34,6 +35,8 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 export default Vue.extend({
   name: 'DefaultLayout',
-  data: () => ({})
+  data: () => ({
+    search: ''
+  })
 })
 </script>
