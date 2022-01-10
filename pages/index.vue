@@ -23,10 +23,12 @@
     </div>
     <div class="row px-3">
       <v-spacer></v-spacer>
-      <v-text-field
-        label="Search" single-line filled dense rounded class="col-8 col-md-6"
-        v-model="search" @input="startSearch"
-      ></v-text-field>
+      <div class="col-8 col-md-6 pa-0">
+        <v-text-field
+          label="Search" single-line filled dense rounded
+          v-model="search" @input="startSearch"
+        ></v-text-field>
+      </div>
       <v-menu bottom offset-x offset-y>
         <template v-slot:activator="{ on, attrs }">
           <v-btn class="mx-2" fab dark small color="primary"
@@ -452,7 +454,6 @@ export default Vue.extend({
           // this.countries = countries.sort((a: Country, b: Country) => (b.TotalConfirmed - a.TotalConfirmed))
           this.global = data.Global || {}
           this.$store.dispatch('setCoutries', cloneVal(countries))
-          console.log(countries)
           this.renderCountries()
         }
       })
